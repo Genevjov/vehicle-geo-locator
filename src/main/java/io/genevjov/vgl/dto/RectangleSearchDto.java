@@ -10,15 +10,9 @@ public class RectangleSearchDto {
 
     @NotNull
     @Valid
-    private GeoPintDto leftTopPoint;
+    private double[] leftBottomPoint;
     @NotNull
     @Valid
-    private GeoPintDto leftBottomPoint;
-    @NotNull
-    @Valid
-    private GeoPintDto rightTopPoint;
-    @NotNull
-    @Valid
-    private GeoPintDto rightBottomPoint;
+    private double[] rightTopPoint;
 
 }

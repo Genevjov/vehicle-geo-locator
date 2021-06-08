@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      database: vgl
+      uri: mongodb://root:example@localhost:27017

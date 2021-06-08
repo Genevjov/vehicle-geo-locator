@@ -11,13 +11,11 @@ import org.springframework.stereotype.Component;
 public class VehicleLocationDtoToVehicleLocationEntityConverter implements Converter<VehicleLocationDto, VehicleLocationEntity> {
 
     @Override
-    public VehicleLocationEntity convert(VehicleLocationDto aVehicleLocationDto) {
-
+    public VehicleLocationEntity convert(VehicleLocationDto vehicleLocationDto) {
         return VehicleLocationEntity.builder()
-                                    .id(aVehicleLocationDto.getId())
-                                    .location(new Point(new Position(aVehicleLocationDto.getGeoPintDto().getLatitude(),
-                                                                     aVehicleLocationDto.getGeoPintDto()
-                                                                                        .getLongitude())))
-                                    .build();
+                .id(vehicleLocationDto.getId())
+                .location(new Point
+                        (new Position(vehicleLocationDto.getGeoPointDto().getLatitude(), vehicleLocationDto.getGeoPointDto().getLongitude())))
+                .build();
     }
 }

@@ -14,5 +14,5 @@ public class VehicleLocationDto {
     private Long id;
     @NotNull
     @Valid
-    private GeoPintDto geoPintDto;
+    private GeoPointDto geoPointDto;
 }
