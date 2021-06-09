@@ -1,5 +1,7 @@
 package io.genevjov.vgl.model;
 
+import javax.validation.constraints.NotNull;
+
 import com.mongodb.client.model.geojson.Point;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,8 +17,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class VehicleLocationEntity {
 
     @Id
+    @NotNull
     private Long id;
-    @GeoSpatialIndexed(name="location")
+    @GeoSpatialIndexed(name = "location")
+    @NotNull
     private Point location;
 
 }

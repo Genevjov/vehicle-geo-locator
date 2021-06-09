@@ -15,4 +15,5 @@ public class VehicleLocationDto {
     @NotNull
     @Valid
     private GeoPointDto geoPointDto;
+
 }

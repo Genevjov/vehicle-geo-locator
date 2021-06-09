@@ -1,12 +1,13 @@
+print("--- Started database creation process ---");
+
+db = db.getSiblingDB("vgl");
 db.createUser(
     {
-        user: "root1",
-        pwd: "example",
-        roles: [
-            {
-                role: "readWrite",
-                db: "vgl"
-            }
-        ]
+        user: "vgl_user",
+        pwd: "vgl_pass",
+        roles: [{role: "readWrite", db: "vgl"}]
     }
 );
+db.createCollection("vehicle_location");
+
+print("--- Database creation process completed ---");
